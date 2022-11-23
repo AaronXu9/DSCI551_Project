@@ -63,7 +63,7 @@ PyQtWebEngine==5.12.1
 pyrsistent @ file:///C:/ci/pyrsistent_1636093257833/work
 python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
 pytz==2022.6
-pywin32==302
+#pywin32==302
 pywinpty @ file:///C:/ci_310/pywinpty_1644230983541/work/target/wheels/pywinpty-2.0.2-cp37-none-win_amd64.whl
 pyzmq @ file:///C:/ci/pyzmq_1657597757589/work
 qtconsole @ file:///home/conda/feedstock_root/build_artifacts/qtconsole-base_1667404144336/work
@@ -73,7 +73,7 @@ Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
 sniffio @ file:///C:/ci/sniffio_1614030522573/work
 soupsieve @ file:///C:/b/abs_fasraqxhlv/croot/soupsieve_1666296394662/work
-terminado @ file:///C:/ci/terminado_1644322782754/work
+#terminado @ file:///C:/ci/terminado_1644322782754/work
 tinycss2 @ file:///C:/b/abs_52w5vfuaax/croot/tinycss2_1668168823131/work
 tornado @ file:///C:/ci/tornado_1662476933490/work
 traitlets @ file:///tmp/build/80754af9/traitlets_1636710298902/work
