@@ -33,7 +33,7 @@ def rm(url):
 def put(file, url_meta, url_partition , k):
     in_csv = file 
     file_dir = '/'+ in_csv.split('.')[0]
-    file = open(file)
+    file = open(file,encoding='utf-8')
     number_lines = sum(1 for row in file)
     partition_size = -(-number_lines // k)
     df_header = list(pd.read_csv(in_csv).columns)
