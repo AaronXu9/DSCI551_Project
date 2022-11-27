@@ -103,12 +103,28 @@ def pmr(rootURL=rootURL, language=None, rating=None, genre=None, s_date=None, e_
                 partition = filter_by_date(partition, s_date=s_date, e_date=e_date)
         
             reduced_df = pd.concat([reduced_df, partition])
-    
+
     except:
         print(res.text)
         return None
     
     return reduced_df
+
+
+def analyze(film_df: pd.DataFrame):
+    """
+    Analyze the search results from pmr to find the average rating, max-rating film and mimimum rating film
+    Args: 
+        film_df
+    Return: 
+        average_rating: float
+        max-rating film: pd.Series
+        mimimum-rating film: pd.Series 
+    """
+    max_film = film_df[film_df['vote_average'] == film_df['vote_average'].max()]
+    min_film = film_df[film_df['vote_average'] == film_df['vote_average'].min()]
+
+    return film_df['vote_average'].mean(), max_film, min_film
 
 
 if __name__ == '__main__':
@@ -117,6 +133,7 @@ if __name__ == '__main__':
     genre = 'Crime'
     s_date = datetime(2009, 1, 1)
     e_date = datetime(2010, 1, 1)
-
-    print(pmr(rootURL=rootURL, language=language, rating=rating, genre=genre, s_date=s_date, e_date=e_date))
-        
+    df = pmr(rootURL=rootURL, language=language, rating=rating, genre=genre, s_date=s_date, e_date=e_date)
+    avg, max_film, min_film = analyze(df)
+    print(df)
+    print(avg, max_film, max_film)
