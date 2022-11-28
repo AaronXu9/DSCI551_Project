@@ -102,7 +102,7 @@ def pmr(rootURL=rootURL, language=None, rating=None, genre=None, s_date=None, e_
             if s_date or e_date:
                 partition = filter_by_date(partition, s_date=s_date, e_date=e_date)
         
-            reduced_df = pd.concat([reduced_df, partition])
+            reduced_df = pd.concat([reduced_df, partition],ignore_index=True)
 
     except:
         print(res.text)
